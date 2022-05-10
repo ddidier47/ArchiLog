@@ -24,4 +24,17 @@ public class StockQuotationImpl5j extends StockQuotationDecorator {
 		return null;
 	}
 
+
+	@Override
+	public ArrayList<StockValue> getTab() {
+		return super.getValues().getTab();
+	}
+
+
+	@Override
+	public void accept(Visitor v) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

@@ -1,7 +1,6 @@
 package dm.al.m1.s2.stock;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -32,7 +31,6 @@ public class StockQuotationImpl1j implements StockQuotation {
 				duration += 1;		
 	        }
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}	
 	}
@@ -91,5 +89,17 @@ public class StockQuotationImpl1j implements StockQuotation {
 		currentIndex = 0;
 		
 	}
+
+	public ArrayList<StockValue> getTab() {
+		return tab;
+	}
+
+	@Override
+	public void accept(Visitor v) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
 
 }

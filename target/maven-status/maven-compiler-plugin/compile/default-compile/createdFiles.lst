@@ -1,8 +1,11 @@
 dm/al/m1/s2/stock/StockQuotationDecorator.class
 dm/al/m1/s2/App.class
 dm/al/m1/s2/stock/StockQuotationImpl1j.class
+dm/al/m1/s2/stock/VisitStockQuotation.class
+dm/al/m1/s2/stock/Visitor.class
 dm/al/m1/s2/stock/StockQuotation.class
 dm/al/m1/s2/stock/StockQuotationImpl5j.class
 dm/al/m1/s2/stock/StockQuotationImplBadValues.class
 dm/al/m1/s2/stock/StockValueImpl.class
+dm/al/m1/s2/stock/compoundStockQuotation.class
 dm/al/m1/s2/stock/StockValue.class

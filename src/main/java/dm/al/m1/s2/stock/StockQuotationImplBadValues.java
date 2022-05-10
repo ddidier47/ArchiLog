@@ -1,15 +1,69 @@
 package dm.al.m1.s2.stock;
 
+import java.util.ArrayList;
+
 public class StockQuotationImplBadValues extends StockQuotationDecorator {
+
+	private ArrayList<StockValue> tab = new ArrayList<StockValue>();
 
 	public StockQuotationImplBadValues(StockQuotation stockQuotation) {
 		super(stockQuotation);
-		// while(stockQuotation.hasNext()){
-		// 	StockValue stockv = stockQuotation.next();
-		// 	if(stockv.low()==0){
-				
-		// 	}
-		// }
+		int i = 0;
+		ArrayList<StockValue> tab2 = stockQuotation.getTab();
+		while(i<tab2.size()){
+			
+			StockValue stockv = tab2.get(i);
+
+			double newValueLow = stockv.low();
+			double newValueHigh = stockv.high();
+
+			
+
+			if(newValueLow<=0){
+				if(i!=0 && i!=tab2.size()-1){
+					newValueLow = (tab2.get(i-1).low()+tab2.get(i+1).low())/2;
+
+				}else if (i==tab2.size()-1){
+					newValueLow = tab2.get(i-1).low();
+				}else{
+					newValueLow = tab2.get(i+1).low();
+				}
+			}
+
+			if(newValueHigh<=0){
+				if(i!=0 && i!=tab2.size()-1){
+
+					newValueHigh = (tab2.get(i-1).high()+tab2.get(i+1).high())/2;
+
+				}else if (i==tab2.size()-1){
+					newValueHigh = tab2.get(i-1).high();
+				}else{
+					newValueHigh = tab2.get(i+1).high();
+				}
+
+			}
+
+			tab.add(new StockValueImpl(stockv.getDuration(),
+										stockv.begin(),
+										stockv.end(),
+										newValueLow,
+										newValueHigh,
+										stockv.volume()));
+			
+			i++;
+			
+		}
+	}
+
+	@Override
+	public ArrayList<StockValue> getTab() {
+		return tab;
+	}
+
+	@Override
+	public void accept(Visitor v) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
