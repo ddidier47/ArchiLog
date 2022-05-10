@@ -6,9 +6,9 @@ boursières, divers indicateurs statistiques mais aussi les différents secteurs
 
 ## Démarrage
 ### Il faut se mettre sur le repertoire "ArchiLog" avec
-        ```bash
+        ``bash
         cd ArchiLog
-        ```
+        ``
     
 ### Ensuite lancer cette commande pour compiler et exécuter le programme
         ```maven
