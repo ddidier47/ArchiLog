@@ -3,12 +3,11 @@ import java.util.ArrayList;
 
 
 public interface StockQuotation extends StockValue {
-	
+	// Iterator
 	boolean hasNext();
 	StockValue next();
-	void reset();
 	StockQuotation getValues();
-	ArrayList<StockValue> getTab();
+	ArrayList<StockValue> getStockValues();
 	// Visitor
 	void accept(Visitor v);
 }

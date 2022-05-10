@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 public class StockQuotationImplBadValues extends StockQuotationDecorator {
 
-	private ArrayList<StockValue> tab = new ArrayList<StockValue>();
+	private ArrayList<StockValue> stockValues = new ArrayList<StockValue>();
 
 	public StockQuotationImplBadValues(StockQuotation stockQuotation) {
 		super(stockQuotation);
 		int i = 0;
-		ArrayList<StockValue> tab2 = stockQuotation.getTab();
+		ArrayList<StockValue> tab2 = stockQuotation.getStockValues();
 		while(i<tab2.size()){
 			
 			StockValue stockv = tab2.get(i);
@@ -43,7 +43,7 @@ public class StockQuotationImplBadValues extends StockQuotationDecorator {
 
 			}
 
-			tab.add(new StockValueImpl(stockv.getDuration(),
+			stockValues.add(new StockValueImpl(stockv.getDuration(),
 										stockv.begin(),
 										stockv.end(),
 										newValueLow,
@@ -56,8 +56,8 @@ public class StockQuotationImplBadValues extends StockQuotationDecorator {
 	}
 
 	@Override
-	public ArrayList<StockValue> getTab() {
-		return tab;
+	public ArrayList<StockValue> getStockValues() {
+		return stockValues;
 	}
 
 	@Override

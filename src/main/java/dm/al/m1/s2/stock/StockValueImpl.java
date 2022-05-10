@@ -43,8 +43,4 @@ public class StockValueImpl implements StockValue {
 		return _table[5];
 	}
 
-	// public double[] get_table() {
-	// 	return _table;
-	// }
-
 }

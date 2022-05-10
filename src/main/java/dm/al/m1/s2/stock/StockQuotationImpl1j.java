@@ -7,8 +7,8 @@ import java.util.ArrayList;
 
 public class StockQuotationImpl1j implements StockQuotation {
 	
-	private int currentIndex = 0;
-	private ArrayList<StockValue> tab = new ArrayList<StockValue>();
+	private int _currentIndex = 0;
+	private ArrayList<StockValue> _stockValues = new ArrayList<StockValue>();
 	
 
 	public StockQuotationImpl1j(String file) {
@@ -21,7 +21,7 @@ public class StockQuotationImpl1j implements StockQuotation {
 			double duration = 0;
 	        for (String line = br.readLine(); line != null; line = br.readLine()) {
 	            String[] oneData = line.split(";");
-	            tab.add(new StockValueImpl( duration, 
+	            _stockValues.add(new StockValueImpl( duration, 
 											Double.parseDouble(oneData[1].replace("\"", "").replace(",", ".")), 
 											Double.parseDouble(oneData[2].replace("\"", "").replace(",", ".")),
 											Double.parseDouble(oneData[3].replace("\"", "").replace(",", ".")), 
@@ -67,14 +67,13 @@ public class StockQuotationImpl1j implements StockQuotation {
 
 	@Override
 	public boolean hasNext() {
-		return currentIndex < tab.size();
+		return _currentIndex < _stockValues.size();
 	}
 
 	@Override
 	public StockValue next() {
-		if(this.hasNext()) {
-			return tab.get(currentIndex++);
-		}
+		if(this.hasNext())
+			return _stockValues.get(_currentIndex++);
 		
 		return null;
 	}
@@ -84,22 +83,15 @@ public class StockQuotationImpl1j implements StockQuotation {
 		return this;
 	}
 
-	@Override
-	public void reset() {
-		currentIndex = 0;
-		
-	}
 
-	public ArrayList<StockValue> getTab() {
-		return tab;
+	@Override
+	public ArrayList<StockValue> getStockValues() {
+		return _stockValues;
 	}
 
 	@Override
 	public void accept(Visitor v) {
-		// TODO Auto-generated method stub
-		
+		// TODO Auto-generated method stub	
 	}
-
-	
 
 }

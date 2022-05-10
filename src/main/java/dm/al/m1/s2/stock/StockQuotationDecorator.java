@@ -54,9 +54,4 @@ public abstract class StockQuotationDecorator implements StockQuotation {
 		return _stockQuotation.getValues();
 	}
 
-	@Override
-	public void reset(){
-		_stockQuotation.reset();
-	}
-
 }

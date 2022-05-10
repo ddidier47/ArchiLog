@@ -5,8 +5,6 @@ import java.util.ArrayList;
 public class StockQuotationImpl5j extends StockQuotationDecorator {
 
 	private int currentIt = 0;
-	private ArrayList<StockValue> tab = new ArrayList<StockValue>();
-	
 
 	public StockQuotationImpl5j(StockQuotation stockQuotation) {
 		super(stockQuotation);	
@@ -16,7 +14,7 @@ public class StockQuotationImpl5j extends StockQuotationDecorator {
 	@Override
 	public StockValue next() {
 		if(this.hasNext()) {
-			StockValue result = tab.get(currentIt);
+			StockValue result = super.getValues().getStockValues().get(currentIt);
 			currentIt += 5;
 			return result;
 		}
@@ -26,8 +24,8 @@ public class StockQuotationImpl5j extends StockQuotationDecorator {
 
 
 	@Override
-	public ArrayList<StockValue> getTab() {
-		return super.getValues().getTab();
+	public ArrayList<StockValue> getStockValues() {
+		return super.getValues().getStockValues();
 	}
 
 
