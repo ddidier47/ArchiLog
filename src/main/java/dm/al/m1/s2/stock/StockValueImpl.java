@@ -2,15 +2,7 @@ package dm.al.m1.s2.stock;
 
 public class StockValueImpl implements StockValue {
 	
-//	private long _duration;
-//	private double _begin;
-//	private double _end;
-//	private double _low;
-//	private double _heigh;
-//	private long _volume;
 	private double[] _table = new double [6];
-	
-	
 
 	public StockValueImpl(double duration, double begin, double end, double low, double heigh, double volume) {
 		_table[0] = duration;
@@ -51,8 +43,8 @@ public class StockValueImpl implements StockValue {
 		return _table[5];
 	}
 
-	public double[] get_table() {
-		return _table;
-	}
+	// public double[] get_table() {
+	// 	return _table;
+	// }
 
 }

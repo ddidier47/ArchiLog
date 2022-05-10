@@ -7,7 +7,6 @@ public class StockQuotationImpl5j extends StockQuotationDecorator {
 	private int currentIt = 0;
 	private ArrayList<StockValue> tab = new ArrayList<StockValue>();
 	
-	
 
 	public StockQuotationImpl5j(StockQuotation stockQuotation) {
 		super(stockQuotation);	
@@ -24,8 +23,5 @@ public class StockQuotationImpl5j extends StockQuotationDecorator {
 		
 		return null;
 	}
-
-
-
 
 }
