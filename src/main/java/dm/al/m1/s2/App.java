@@ -8,16 +8,13 @@ import dm.al.m1.s2.stock.StockValue;
 import dm.al.m1.s2.stock.compoundStockQuotation;
 
 /**
- * Hello world!
+ * Etudiants
+ * * Dimitri DIDIER
+ * * Aguibou BARRY
  */
 public final class App {
     private App() {
     }
-
-    /**
-     * Says hello to the world.
-     * @param args The arguments of the program.
-     */
 
     public static void main(String[] args) {
         //StockQuotation microsoft  = new StockQuotationImpl1j("MICROSOFT.csv");

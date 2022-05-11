@@ -2,6 +2,12 @@ package dm.al.m1.s2.stock;
 
 import java.util.ArrayList;
 
+/**
+ * Etudiants
+ * * Dimitri DIDIER
+ * * Aguibou BARRY
+ */
+
 public class StockQuotationImpl5j extends StockQuotationDecorator {
 
 	private int currentIt = 0;

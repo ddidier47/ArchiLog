@@ -1,5 +1,11 @@
 package dm.al.m1.s2.stock;
 
+/**
+ * Etudiants
+ * * Dimitri DIDIER
+ * * Aguibou BARRY
+ */
+
 public class StockValueImpl implements StockValue {
 	
 	private double[] _table = new double [6];

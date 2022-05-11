@@ -1,5 +1,11 @@
 package dm.al.m1.s2.stock;
 
+/**
+ * Etudiants
+ * * Dimitri DIDIER
+ * * Aguibou BARRY
+ */
+
 public abstract class StockQuotationDecorator implements StockQuotation {
 	
 	private StockQuotation _stockQuotation;

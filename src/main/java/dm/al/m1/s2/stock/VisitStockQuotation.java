@@ -1,6 +1,11 @@
 package dm.al.m1.s2.stock;
 import java.util.ArrayList;
 
+/**
+ * Etudiants
+ * * Dimitri DIDIER
+ * * Aguibou BARRY
+ */
 
 public class VisitStockQuotation implements Visitor{
 

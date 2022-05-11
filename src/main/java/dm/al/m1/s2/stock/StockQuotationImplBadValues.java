@@ -2,9 +2,13 @@ package dm.al.m1.s2.stock;
 
 import java.util.ArrayList;
 
-public class StockQuotationImplBadValues extends StockQuotationDecorator {
+/**
+ * Etudiants
+ * * Dimitri DIDIER
+ * * Aguibou BARRY
+ */
 
-	private ArrayList<StockValue> stockValues = new ArrayList<StockValue>();
+public class StockQuotationImplBadValues extends StockQuotationDecorator {
 
 	public StockQuotationImplBadValues(StockQuotation stockQuotation) {
 		super(stockQuotation);
@@ -57,7 +61,7 @@ public class StockQuotationImplBadValues extends StockQuotationDecorator {
 
 	@Override
 	public ArrayList<StockValue> getStockValues() {
-		return stockValues;
+		return super.getValues().getStockValues();
 	}
 
 	@Override

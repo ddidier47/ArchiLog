@@ -5,6 +5,12 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * Etudiants
+ * * Dimitri DIDIER
+ * * Aguibou BARRY
+ */
+
 public class StockQuotationImpl1j implements StockQuotation {
 	
 	private int _currentIndex = 0;
